@@ -55,7 +55,7 @@ export default function Users({ app }) {
 		})
 		axios({
 			method: "POST",
-			url: "/Subscriptions/Add",
+			url: "http://localhost:5000/Subscriptions/Add",
 			data: {
 				currentID: app.currentUser.id,
 				subscribeToID,

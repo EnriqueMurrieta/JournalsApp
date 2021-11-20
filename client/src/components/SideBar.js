@@ -20,7 +20,7 @@ export default function SideBar({ app, setUser, handleSideBar }) {
 		if (app.currentUser.providerType == "anon-user") {
 			axios({
 				method: "POST",
-				url: "/LogOutDemo",
+				url: "http://localhost:5000/LogOutDemo",
 				data: {
 					currentID: app.currentUser.id
 				}
