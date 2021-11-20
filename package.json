@@ -2,6 +2,7 @@
   "name": "journalsapp",
   "version": "1.0.0",
   "description": "MERN PDF uploads",
+  "proxy": "http://localhost:5000",
   "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",

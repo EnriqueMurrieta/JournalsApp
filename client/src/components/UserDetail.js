@@ -51,7 +51,7 @@ export default function UserDetail({ setUser, app, user }) {
 			formData.append('userName', app.currentUser._profile.data.name);
 			formData.append('userPictureUrl', app.currentUser._profile.data.pictureUrl);
 		}
-		axios.post('https://gentle-hamlet-24623.herokuapp.com/post/file', formData)
+		axios.post('/post/file', formData)
 	}
 
 	const displaySideBar =

@@ -23,7 +23,7 @@ export default function Feed({ app, user }) {
         let mounted = true
         axios({
             method: "POST",
-            url: "https://gentle-hamlet-24623.herokuapp.com/retrieve/feed",
+            url: "/retrieve/feed",
             data: {
                 currentID: app.currentUser.id
             }
