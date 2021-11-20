@@ -44,7 +44,7 @@ export default function Feed({ app, user }) {
             if (post._id == id) {
                 axios({
                     method: "POST",
-                    url: "https://gentle-hamlet-24623.herokuapp.com/openPDF",
+                    url: "/openPDF",
                     responseType: "blob",
                     data: {
                         postID: post._id

@@ -9,7 +9,7 @@ import Footer from './Footer';
 import { MDBBtn, MDBIcon, MDBTypography, MDBContainer, MDBRow, MDBCol, MDBSpinner } from 'mdb-react-ui-kit';
 
 
-const redirectUri = "http://localhost:3000/about";
+const redirectUri = "/about";
 const credentials = Realm.Credentials.google(redirectUri);
 
 export default function Login({ setUser, app }) {

@@ -30,7 +30,7 @@ export default function Subscriptions({ app }) {
 		let mounted = true;
 		axios({
 			method: "POST",
-			url: "http://localhost:5000/GetSubs",
+			url: "/GetSubs",
 			data: {
 				currentID: app.currentUser.id
 			}
@@ -56,7 +56,7 @@ export default function Subscriptions({ app }) {
 		})
 		axios({
 			method: "POST",
-			url: "http://localhost:5000/Subscriptions/Add",
+			url: "/Subscriptions/Add",
 			data: {
 				currentID: app.currentUser.id,
 				subscribeToID,
