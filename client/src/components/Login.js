@@ -9,7 +9,7 @@ import Footer from './Footer';
 import { MDBBtn, MDBIcon, MDBTypography, MDBContainer, MDBRow, MDBCol, MDBSpinner } from 'mdb-react-ui-kit';
 
 
-const redirectUri = "/about";
+const redirectUri = "https://gentle-hamlet-24623.herokuapp.com/about";
 const credentials = Realm.Credentials.google(redirectUri);
 
 export default function Login({ setUser, app }) {
