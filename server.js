@@ -25,16 +25,6 @@ const uri = "mongodb+srv://enrique123:enrique123@cluster0.t8wvf.mongodb.net/mySe
 //const uri = "mongodb+srv://enrique123:<password>@cluster0.t8wvf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 //const client = new MongoClient(uri);
 
-//Serve static assets if in production
-if(process.env.NODE_ENV === 'production') {
-	// Set static folder
-	app.use(express.static('client/build'));
-
-	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-	})
-}
-
 //***************** ENDPOINTS */
 
 //By Feed
@@ -507,6 +497,16 @@ async function registerUser(user) {
 	} finally {
 		await client.close();
 	}
+}
+
+//Serve static assets if in production
+if(process.env.NODE_ENV === 'production') {
+	// Set static folder
+	app.use(express.static('client/build'));
+
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	})
 }
 
 /*
