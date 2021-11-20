@@ -23,7 +23,7 @@ export default function Login({ setUser, app }) {
 			try {
 				axios({
 					method: "POST",
-					url: "http://localhost:5000/AuthDB",
+					url: "https://gentle-hamlet-24623.herokuapp.com/AuthDB",
 					data: {
 						auth: { userInfo }
 					}
@@ -46,7 +46,7 @@ export default function Login({ setUser, app }) {
 		} finally {
 			axios({
 				method: "POST",
-				url: "http://localhost:5000/demoUser",
+				url: "https://gentle-hamlet-24623.herokuapp.com/demoUser",
 				data: {
 					currentID: app.currentUser.id
 				}

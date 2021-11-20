@@ -23,7 +23,7 @@ export default function Feed({ app, user }) {
         let mounted = true
         axios({
             method: "POST",
-            url: "http://localhost:5000/retrieve/feed",
+            url: "https://gentle-hamlet-24623.herokuapp.com/retrieve/feed",
             data: {
                 currentID: app.currentUser.id
             }
@@ -44,7 +44,7 @@ export default function Feed({ app, user }) {
             if (post._id == id) {
                 axios({
                     method: "POST",
-                    url: "http://localhost:5000/openPDF",
+                    url: "https://gentle-hamlet-24623.herokuapp.com/openPDF",
                     responseType: "blob",
                     data: {
                         postID: post._id
