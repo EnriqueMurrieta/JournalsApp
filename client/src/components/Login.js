@@ -9,7 +9,7 @@ import Footer from './Footer';
 import { MDBBtn, MDBIcon, MDBTypography, MDBContainer, MDBRow, MDBCol, MDBSpinner } from 'mdb-react-ui-kit';
 
 
-const redirectUri = "http://localhost:5000/about";
+const redirectUri = "/about";
 const credentials = Realm.Credentials.google(redirectUri);
 
 export default function Login({ setUser, app }) {
@@ -23,7 +23,7 @@ export default function Login({ setUser, app }) {
 			try {
 				axios({
 					method: "POST",
-					url: "http://localhost:5000/AuthDB",
+					url: "/AuthDB",
 					data: {
 						auth: { userInfo }
 					}
@@ -46,7 +46,7 @@ export default function Login({ setUser, app }) {
 		} finally {
 			axios({
 				method: "POST",
-				url: "http://localhost:5000/demoUser",
+				url: "/demoUser",
 				data: {
 					currentID: app.currentUser.id
 				}

@@ -24,7 +24,7 @@ export default function YourPosts({ app }) {
 		let mounted = true
 		axios({
 			method: "POST",
-			url: "http://localhost:5000/GetProfile",
+			url: "/GetProfile",
 			headers: {
 				"Content-Type": "application/json"
 			},
@@ -44,7 +44,7 @@ export default function YourPosts({ app }) {
 		if (app.currentUser.providerType == "anon-user") {
 			axios({
 				method: "POST",
-				url: "http://localhost:5000/RetrieveAnonPosts",
+				url: "/RetrieveAnonPosts",
 				headers: {
 					"Content-Type": "application/json"
 				}
@@ -56,7 +56,7 @@ export default function YourPosts({ app }) {
 		} else {
 			axios({
 				method: "POST",
-				url: "http://localhost:5000/retrieve",
+				url: "/retrieve",
 				headers: {
 					"Content-Type": "application/json"
 				},
@@ -77,7 +77,7 @@ export default function YourPosts({ app }) {
 			if (post._id == id) {
 				axios({
 					method: "POST",
-					url: "http://localhost:5000/openPDF",
+					url: "/openPDF",
 					responseType: "blob",
 					data: {
 						postID: post._id
