@@ -1,0 +1,16 @@
+.sideBar {
+    /*display:flex;
+    flex:1;
+    z-index: 10;*/
+    position: fixed;
+    height: 100vh;
+}
+
+.navComp {
+    /*display:flex;
+    flex:1;
+    z-index: 10;*/
+    /*position: fixed;
+    height: 100vh;*/
+    height: 150%
+}

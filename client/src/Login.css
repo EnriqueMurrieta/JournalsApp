@@ -1,0 +1,29 @@
+.big-image {
+    background-image: url("./backGroundImage.jpg");
+    /*width: 100%;
+    top: 0;*/
+    background-size:cover;
+    height: 100vh;
+    /*height:auto;*/
+    /*height: 100%;*/
+    /*background-repeat: no-repeat;*/
+    background-position: center;
+    position: relative;
+    /*display: block;*/
+    text-align: center;
+  }
+
+@media (max-width: 750px) {
+    @media (max-height: 500px) {
+        .big-image {
+            height: 150vh;
+        }
+    }
+}
+
+.description {
+    text-align: center;
+    /*padding-right: 15%;*/
+    padding-top: 20%;
+    font-weight: bold;
+}
